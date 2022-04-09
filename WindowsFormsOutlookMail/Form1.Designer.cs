@@ -37,10 +37,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.webBrowser = new System.Windows.Forms.WebBrowser();
             this.dataGrid = new System.Windows.Forms.DataGridView();
+            this.btnReceive = new System.Windows.Forms.Button();
             this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Body = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Sender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.DateTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnReceive = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -119,18 +120,37 @@
             this.dataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Subject,
+            this.Body,
             this.Sender,
             this.DateTime});
             this.dataGrid.Location = new System.Drawing.Point(43, 223);
             this.dataGrid.Name = "dataGrid";
             this.dataGrid.Size = new System.Drawing.Size(355, 272);
             this.dataGrid.TabIndex = 8;
+            this.dataGrid.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGrid_CellClick);
+            // 
+            // btnReceive
+            // 
+            this.btnReceive.Location = new System.Drawing.Point(615, 507);
+            this.btnReceive.Name = "btnReceive";
+            this.btnReceive.Size = new System.Drawing.Size(75, 23);
+            this.btnReceive.TabIndex = 9;
+            this.btnReceive.Text = "Receive";
+            this.btnReceive.UseVisualStyleBackColor = true;
+            this.btnReceive.Click += new System.EventHandler(this.btnReceive_Click);
             // 
             // Subject
             // 
             this.Subject.DataPropertyName = "Subject";
             this.Subject.HeaderText = "Subject";
             this.Subject.Name = "Subject";
+            // 
+            // Body
+            // 
+            this.Body.DataPropertyName = "Body";
+            this.Body.HeaderText = "Body";
+            this.Body.Name = "Body";
+            this.Body.Visible = false;
             // 
             // Sender
             // 
@@ -143,15 +163,6 @@
             this.DateTime.DataPropertyName = "Date";
             this.DateTime.HeaderText = "DateTime";
             this.DateTime.Name = "DateTime";
-            // 
-            // btnReceive
-            // 
-            this.btnReceive.Location = new System.Drawing.Point(615, 507);
-            this.btnReceive.Name = "btnReceive";
-            this.btnReceive.Size = new System.Drawing.Size(75, 23);
-            this.btnReceive.TabIndex = 9;
-            this.btnReceive.Text = "Receive";
-            this.btnReceive.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -187,10 +198,11 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.WebBrowser webBrowser;
         private System.Windows.Forms.DataGridView dataGrid;
+        private System.Windows.Forms.Button btnReceive;
         private System.Windows.Forms.DataGridViewTextBoxColumn Subject;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Body;
         private System.Windows.Forms.DataGridViewTextBoxColumn Sender;
         private System.Windows.Forms.DataGridViewTextBoxColumn DateTime;
-        private System.Windows.Forms.Button btnReceive;
     }
 }
 
